@@ -3,7 +3,7 @@ import os
 import random
 from PIL import Image
 
-# 1. Define your "Solapur Hotspot" range
+
 LAT_RANGE = (17.6590, 17.6900)
 LNG_RANGE = (75.8900, 75.9200)
 
@@ -35,7 +35,7 @@ def inject_gps(img_path, lat, lng):
     img.save(img_path, exif=exif_bytes)
     print(f"Fixed: {img_path} at {lat}, {lng}")
 
-# 2. Process your dataset folder
+
 dataset_path = r"C:\Users\Shrid\OneDrive\Desktop\final\pothole_dataset"
 for filename in os.listdir(dataset_path):
     if filename.endswith(".jpg") or filename.endswith(".png"):
